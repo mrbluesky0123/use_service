@@ -57,7 +57,7 @@ TEMPLATES = [
         'NAME': 'MemberWorks',
         'USER': 'mrbluesky',
         'PASSWORD': 'kang12!@',
-        'HOST': '198.13.47.188',
+        'HOST': '198.13.47.188', 
         'PORT': '19762'
     },
 ]
