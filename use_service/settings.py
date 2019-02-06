@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'point_use.apps.PointUseConfig',
 ]
 
 MIDDLEWARE = [
@@ -53,12 +54,17 @@ ROOT_URLCONF = 'use_service.urls'
 
 TEMPLATES = [
     {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'MemberWorks',
-        'USER': 'mrbluesky',
-        'PASSWORD': 'kang12!@',
-        'HOST': '198.13.47.188', 
-        'PORT': '19762'
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
     },
 ]
 
@@ -70,8 +76,12 @@ WSGI_APPLICATION = 'use_service.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'ApproveDB',
+        'USER': 'mrbluesky',
+        'PASSWORD': 'kang12!@',
+        'HOST': '198.13.47.188', 
+        'PORT': '19762'
     }
 }
 
