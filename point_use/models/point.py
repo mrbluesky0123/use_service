@@ -1,5 +1,5 @@
 from django.db import models
-from point_use.managers.point_manager import PointManager
+from point_use.managers.pointmanager import PointManager
 
 class Point(models.Model):
     mbr_id = models.CharField(max_length = 10)

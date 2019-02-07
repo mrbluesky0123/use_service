@@ -1,5 +1,5 @@
 from django.db import models
-from point_use.managers.member_manager import MemberManager
+from point_use.managers.membermanager import MemberManager
 
 class Member(models.Model):
     STATUS = (
