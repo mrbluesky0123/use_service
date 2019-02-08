@@ -1,7 +1,6 @@
 from django.conf.urls import url 
-from use_service import views
+from point_use import views
 
 urlpatterns = [ 
-    url(r'^toys/$', views.toy_list), 
-    url(r'^toys/(?P<pk>[0-9]+)$', views.toy_detail), 
+    url(r'^point_use/', views.point_use_service), 
 ] 

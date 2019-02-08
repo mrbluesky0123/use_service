@@ -4,7 +4,12 @@ from django.db.models import Q
 class MemberManager(models.Manager):
 
     def get_member_status(self, mbr_id):
-        return self.filter(mbr_id=mbr_id).values_list('mbr_sts', flat=True)[0]
+        try:
+            mbr_sts = self.filter(mbr_id=mbr_id).values_list('mbr_sts', flat=True)[0]
+        except:
+            mbr_sts = None
+
+        return mbr_sts
     
     def get_member_by_status(self, status):
         return self.filter(mbr_sts=status)
